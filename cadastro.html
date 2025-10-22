@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro - ConectaBem</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+
+  <style>
+    /* Remove borda preta padrão do fieldset */
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #4b0d88;
+      margin-bottom: 8px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    .botao {
+      background-color: #4b0d88;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .botao:hover {
+      background-color: #6c1bb6;
+    }
+
+    .botao-certificado {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-contribuir {
+      display: inline-block;
+      background-color: #4b0d88;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-contribuir:hover {
+      background-color: #6c1bb6;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container-logo">
+      <img src="imagens/logo.png" alt="Logo ConectaBem" class="logo" />
+      <span class="nome-site">ConectaBem</span>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html" class="ativo">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="conteudo">
+    <h2 class="titulo-secao">Cadastre-se na ConectaBem</h2>
+
+    <div class="card-cadastro">
+      <form action="#" method="post" class="form-cadastro">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+
+        <label for="data-nascimento">Data de Nascimento:</label>
+        <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+        <fieldset>
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" required>
+
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" required>
+
+          <label for="estado">Estado:</label>
+          <input type="text" id="estado" name="estado" required>
+        </fieldset>
+
+        <label for="tipo">Tipo de cadastro:</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecione...</option>
+          <option value="voluntario">Voluntário</option>
+          <option value="doador">Doador</option>
+          <option value="organizacao">Organização</option>
+          <option value="ambos">Ambas as opções</option>
+        </select>
+
+        <button type="submit" class="botao enviar">Cadastrar</button>
+      </form>
+    </div>
+    <!-- Seção: Equipe e Estrutura Organizacional -->
+    <section id="equipe" class="roles">
+      <h2>Equipe e Estrutura Organizacional</h2>
+      <div class="role-grid">
+        <div class="role-card">
+          <i>👩‍💼</i>
+          <h3>Coordenação Geral</h3>
+          <p>Responsável por supervisionar e orientar as ações de todas as áreas da ConectaBem.</p>
+        </div>
+        <div class="role-card">
+          <i>🧑‍💻</i>
+          <h3>Equipe Técnica</h3>
+          <p>Profissionais especializados em tecnologia, comunicação e análise de dados.</p>
+        </div>
+        <div class="role-card">
+          <i>🤝</i>
+          <h3>Gestão de Voluntariado</h3>
+          <p>Equipe dedicada a organizar, acompanhar e valorizar o trabalho dos voluntários.</p>
+        </div>
+        <div class="role-card">
+          <i>📊</i>
+          <h3>Administração e Finanças</h3>
+          <p>Responsável por gerenciar recursos e garantir a sustentabilidade dos projetos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Certificados Digitais -->
+    <section id="certificados" class="roles">
+      <h2>Certificados Digitais de Participação</h2>
+      <p>Reconhecemos o seu engajamento com a ConectaBem! Ao participar de ações, eventos e campanhas, você poderá gerar seu certificado digital de participação.</p>
+
+      <div class="botao-certificado">
+        <a href="#" id="baixarCertificado" class="btn-contribuir" role="button" aria-label="Baixar certificado">
+          🎖️ Baixar Certificado
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>© 2025 ConectaBem — Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    function sanitizeFileName(name) {
+      return name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '_');
+    }
+
+    async function getLogoDataUrl() {
+      try {
+        const res = await fetch('imagens/logo.png');
+        if (!res.ok) return null;
+        const blob = await res.blob();
+        return await new Promise(resolve => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.readAsDataURL(blob);
+        });
+      } catch (err) {
+        return null;
+      }
+    }
+
+    document.getElementById('baixarCertificado').addEventListener('click', async function (e) {
+      e.preventDefault();
+      const nome = (document.getElementById('nome')?.value.trim()) || 'Participante';
+      const tipo = (document.getElementById('tipo')?.value) || 'Participação';
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      const logoData = await getLogoDataUrl();
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const margin = 40;
+      let y = 60;
+
+      doc.setFillColor(245, 235, 255);
+      doc.rect(0, 0, pageWidth, doc.internal.pageSize.getHeight(), 'F');
+
+      if (logoData) {
+        const imgProps = doc.getImageProperties(logoData);
+        const imgWidth = 110;
+        const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
+        doc.addImage(logoData, 'PNG', (pageWidth - imgWidth) / 2, y, imgWidth, imgHeight);
+        y += imgHeight + 12;
+      }
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(22);
+      doc.setTextColor(75, 13, 136);
+      doc.text('Certificado de Participação', pageWidth / 2, y, { align: 'center' });
+      y += 28;
+
+      doc.setFontSize(12);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(50, 50, 50);
+      doc.text('A ConectaBem certifica que', pageWidth / 2, y, { align: 'center' });
+      y += 22;
+
+      doc.setFontSize(18);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(25, 25, 25);
+      doc.text(nome, pageWidth / 2, y, { align: 'center' });
+      y += 26;
+
+      const texto = `participou como ${tipo} nas ações promovidas pela ConectaBem, demonstrando comprometimento e solidariedade.`;
+      doc.setFontSize(12);
+      doc.text(doc.splitTextToSize(texto, pageWidth - margin * 2), margin, y, { align: 'center' });
+      y += 60;
+
+      const data = new Date().toLocaleDateString('pt-BR');
+      doc.setFontSize(11);
+      doc.setTextColor(90, 90, 90);
+      doc.text(`Emitido em ${data} — ConectaBem © 2025`, pageWidth / 2, doc.internal.pageSize.getHeight() - 60, { align: 'center' });
+
+      doc.save(`Certificado_${sanitizeFileName(nome)}.pdf`);
+    });
+  </script>
+</body>
+</html>
